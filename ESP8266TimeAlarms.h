@@ -134,7 +134,10 @@ public:
     tma.tm_min = M;
     tma.tm_sec = S;
     t2 = mktime(&tma);
-    return t2-previousMidnight(t1);
+    int diff = t2-previousMidnight(t1);
+    if (diff > SECS_PER_DAY)
+      diff -= SECS_PER_DAY;
+    return diff;
 }
   // functions to create alarms and timers
 
