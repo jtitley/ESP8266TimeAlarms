@@ -128,7 +128,7 @@ A: The time library is intended to handle times from Jan 1 1970 through Jan 19 2
 Q: How many alarms can be created?
 A: Up to six alarms can be scheduled.  
 The number of alarms can be changed in the TimeAlarms header file (set by the constant dtNBR_ALARMS,
-note that the RAM used equals dtNBR_ALARMS  * 11)
+note that the RAM used equals dtNBR_ALARMS  * 40)
 
 onceOnly Alarms and Timers are freed when they are triggered so another onceOnly alarm can be set to trigger again.
 There is no limit to the number of times a onceOnly alarm can be reset.
